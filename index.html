@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic & Height Evolution: 180-Day Transformation</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>AESTHETIC<span class="accent">EVOLUTION</span></span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#tracker" class="nav-link">Tracker</a>
+                <a href="#workout" class="nav-link">Workout</a>
+                <a href="#diet" class="nav-link">Diet</a>
+                <a href="#aesthetics" class="nav-link">Aesthetics</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i>
+                <span>180-Day Transformation</span>
+            </div>
+            <h1 class="hero-title">
+                AESTHETIC &<br>
+                <span class="gradient-text">HEIGHT EVOLUTION</span>
+            </h1>
+            <p class="hero-subtitle">
+                From 48kg to 60kg Lean Muscle Mass. Maximum Height Potential through Posture Correction. 
+                100% Home-Based. No Equipment Needed.
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-value">21</span>
+                    <span class="stat-label">Years Old</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">5'7"</span>
+                    <span class="stat-label">Height</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">48kg</span>
+                    <span class="stat-label">Start Weight</span>
+                </div>
+                <div class="hero-stat target">
+                    <span class="stat-value">60kg</span>
+                    <span class="stat-label">Target Weight</span>
+                </div>
+            </div>
+            <a href="#dashboard" class="cta-button">
+                <i class="fas fa-rocket"></i>
+                Start Your Journey
+            </a>
+        </div>
+        <div class="hero-visual">
+            <div class="glow-circle"></div>
+            <div class="floating-icons">
+                <i class="fas fa-heartbeat"></i>
+                <i class="fas fa-bolt"></i>
+                <i class="fas fa-chart-line"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 1: Personal Dashboard & Live Stats -->
+    <section id="dashboard" class="section dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">MODULE 01</span>
+                <h2 class="section-title">Personal <span class="accent">Dashboard</span></h2>
+                <p class="section-desc">Track your vital stats and monitor your transformation journey</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Stats Cards -->
+                <div class="stat-card">
+                    <div class="stat-icon age">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Age</span>
+                        <span class="stat-value" id="ageValue">21</span>
+                        <span class="stat-unit">Years</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon height">
+                        <i class="fas fa-ruler-vertical"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Height</span>
+                        <span class="stat-value">170</span>
+                        <span class="stat-unit">cm (5'7")</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon current-weight">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Current Weight</span>
+                        <span class="stat-value" id="currentWeightDisplay">48</span>
+                        <span class="stat-unit">kg</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card target-card">
+                    <div class="stat-icon target">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Target Weight</span>
+                        <span class="stat-value">60</span>
+                        <span class="stat-unit">kg</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- BMI Calculator -->
+            <div class="bmi-calculator">
+                <div class="bmi-header">
+                    <i class="fas fa-calculator"></i>
+                    <h3>BMI Calculator</h3>
+                </div>
+                <div class="bmi-inputs">
+                    <div class="input-group">
+                        <label for="bmiHeight">Height (cm)</label>
+                        <input type="number" id="bmiHeight" value="170" min="100" max="250">
+                    </div>
+                    <div class="input-group">
+                        <label for="bmiWeight">Weight (kg)</label>
+                        <input type="number" id="bmiWeight" value="48" min="30" max="200">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateBMI()">
+                        <i class="fas fa-calculator"></i> Calculate
+                    </button>
+                </div>
+                <div class="bmi-result" id="bmiResult">
+                    <div class="bmi-value">
+                        <span class="bmi-number" id="bmiNumber">16.6</span>
+                        <span class="bmi-category" id="bmiCategory">Underweight</span>
+                    </div>
+                    <div class="bmi-bar">
+                        <div class="bmi-progress" id="bmiProgress" style="width: 25%"></div>
+                        <div class="bmi-markers">
+                            <span>Underweight</span>
+                            <span>Normal</span>
+                            <span>Overweight</span>
+                            <span>Obese</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Overview -->
+            <div class="progress-overview">
+                <div class="progress-card">
+                    <h4>Journey Progress</h4>
+                    <div class="progress-ring-container">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="progress-ring-bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="progress-ring-fill" id="progressRing" cx="60" cy="60" r="54" 
+                                stroke-dasharray="339.292" stroke-dashoffset="339.292"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span id="progressPercent">0%</span>
+                            <small>Complete</small>
+                        </div>
+                    </div>
+                    <div class="progress-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Weight Gained</span>
+                            <span class="detail-value" id="weightGained">0 kg</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Remaining</span>
+                            <span class="detail-value" id="weightRemaining">12 kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 2: Interactive Weight Growth Tracker -->
+    <section id="tracker" class="section tracker-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">MODULE 02</span>
+                <h2 class="section-title">Weight Growth <span class="accent">Tracker</span></h2>
+                <p class="section-desc">Monitor your weight progression with interactive charts</p>
+            </div>
+            
+            <div class="tracker-grid">
+                <!-- Chart Container -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-chart-line"></i> Weight Progression</h3>
+                        <div class="chart-actions">
+                            <button class="chart-btn" onclick="resetChart()">
+                                <i class="fas fa-redo"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="weightChart"></canvas>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="chart-stat">
+                            <span class="label">Starting</span>
+                            <span class="value" id="startWeightStat">48 kg</span>
+                        </div>
+                        <div class="chart-stat">
+                            <span class="label">Current</span>
+                            <span class="value current" id="currentWeightStat">48 kg</span>
+                        </div>
+                        <div class="chart-stat">
+                            <span class="label">Target</span>
+                            <span class="value target">60 kg</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Weight Input -->
+                <div class="weight-input-panel">
+                    <div class="input-card">
+                        <h3><i class="fas fa-plus-circle"></i> Log New Weight</h3>
+                        <div class="input-group">
+                            <label for="newWeight">Enter Weight (kg)</label>
+                            <input type="number" id="newWeight" placeholder="e.g., 49.5" step="0.1" min="40" max="100">
+                        </div>
+                        <div class="input-group">
+                            <label for="weightDate">Date</label>
+                            <input type="date" id="weightDate">
+                        </div>
+                        <button class="update-btn" onclick="addWeightEntry()">
+                            <i class="fas fa-save"></i> Update Progress
+                        </button>
+                        <div class="quick-add">
+                            <span>Quick Add:</span>
+                            <button onclick="quickAddWeight(0.5)">+0.5kg</button>
+                            <button onclick="quickAddWeight(1)">+1kg</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Entries -->
+                    <div class="entries-card">
+                        <h3><i class="fas fa-history"></i> Recent Entries</h3>
+                        <div class="entries-list" id="entriesList">
+                            <div class="entry-item">
+                                <span class="entry-date">Day 1</span>
+                                <span class="entry-weight">48.0 kg</span>
+                                <span class="entry-change">Start</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3: Dual-Routine Workout Engine -->
+    <section id="workout" class="section workout-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">MODULE 03</span>
+                <h2 class="section-title">Dual-Routine <span class="accent">Workout Engine</span></h2>
+                <p class="section-desc">Height & Posture Daily + 5-Day Aesthetic Muscle Split</p>
+            </div>
+            
+            <!-- Workout Tabs -->
+            <div class="workout-tabs">
+                <button class="tab-btn active" onclick="switchTab('posture')">
+                    <i class="fas fa-arrows-alt-v"></i>
+                    Height & Posture (Daily)
+                </button>
+                <button class="tab-btn" onclick="switchTab('muscle')">
+                    <i class="fas fa-dumbbell"></i>
+                    Aesthetic Muscle Split (5-Day)
+                </button>
+            </div>
+            
+            <!-- Section A: Height & Posture -->
+            <div id="postureTab" class="tab-content active">
+                <div class="routine-header">
+                    <div class="routine-icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <div class="routine-info">
+                        <h3>Spinal Decompression Routine</h3>
+                        <p>Daily exercises to maximize height potential through posture correction</p>
+                        <span class="routine-duration"><i class="fas fa-clock"></i> 15-20 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="exercises-grid">
+                    <div class="exercise-card" data-exercise="hanging">
+                        <div class="exercise-checkbox">
+                            <input type="checkbox" id="hanging" onchange="toggleExercise('hanging')">
+                            <label for="hanging"></label>
+                        </div>
+                        <div class="exercise-content">
+                            <div class="exercise-image">
+                                <i class="fas fa-hand-rock"></i>
+                            </div>
+                            <div class="exercise-details">
+                                <h4>Hanging</h4>
+                                <p>Dead hang from a bar to decompress the spine</p>
+                                <div class="exercise-meta">
+                                    <span><i class="fas fa-clock"></i> 2 minutes</span>
+                                    <span><i class="fas fa-redo"></i> 2 sets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-card" data-exercise="cobra">
+                        <div class="exercise-checkbox">
+                            <input type="checkbox" id="cobra" onchange="toggleExercise('cobra')">
+                            <label for="cobra"></label>
+                        </div>
+                        <div class="exercise-content">
+                            <div class="exercise-image">
+                                <i class="fas fa-snake"></i>
+                            </div>
+                            <div class="exercise-details">
+                                <h4>Cobra Stretch</h4>
+                                <p>Back extension to strengthen spinal erectors</p>
+                                <div class="exercise-meta">
+                                    <span><i class="fas fa-clock"></i> 30 seconds</span>
+                                    <span><i class="fas fa-redo"></i> 3 sets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-card" data-exercise="catcow">
+                        <div class="exercise-checkbox">
+                            <input type="checkbox" id="catcow" onchange="toggleExercise('catcow')">
+                            <label for="catcow"></label>
+                        </div>
+                        <div class="exercise-content">
+                            <div class="exercise-image">
+                                <i class="fas fa-cat"></i>
+                            </div>
+                            <div class="exercise-details">
+                                <h4>Cat-Cow Stretch</h4>
+                                <p>Spinal flexion and extension for mobility</p>
+                                <div class="exercise-meta">
+                                    <span><i class="fas fa-clock"></i> 1 minute</span>
+                                    <span><i class="fas fa-redo"></i> 2 sets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-card" data-exercise="wallslides">
+                        <div class="exercise-checkbox">
+                            <input type="checkbox" id="wallslides" onchange="toggleExercise('wallslides')">
+                            <label for="wallslides"></label>
+                        </div>
+                        <div class="exercise-content">
+                            <div class="exercise-image">
+                                <i class="fas fa-wall-brick"></i>
+                            </div>
+                            <div class="exercise-details">
+                                <h4>Wall Slides</h4>
+                                <p>Improve posture and shoulder mobility</p>
+                                <div class="exercise-meta">
+                                    <span><i class="fas fa-clock"></i> 45 seconds</span>
+                                    <span><i class="fas fa-redo"></i> 3 sets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daily-progress">
+                    <h4>Today's Progress</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="postureProgress" style="width: 0%"></div>
+                    </div>
+                    <span id="postureProgressText">0/4 exercises completed</span>
+                </div>
+            </div>
+            
+            <!-- Section B: Aesthetic Muscle Split -->
+            <div id="muscleTab" class="tab-content">
+                <div class="split-tabs">
+                    <button class="split-btn active" onclick="switchSplit('push')">Push</button>
+                    <button class="split-btn" onclick="switchSplit('pull')">Pull</button>
+                    <button class="split-btn" onclick="switchSplit('legs')">Legs</button>
+                    <button class="split-btn" onclick="switchSplit('upper')">Upper</button>
+                    <button class="split-btn" onclick="switchSplit('lower')">Lower</button>
+                </div>
+                
+                <!-- Push Day -->
+                <div id="pushSplit" class="split-content active">
+                    <div class="split-header">
+                        <h3><i class="fas fa-hand-rock"></i> Push Day - Chest, Shoulders, Triceps</h3>
+                        <span class="split-duration"><i class="fas fa-clock"></i> 45-60 minutes</span>
+                    </div>
+                    <div class="exercises-grid">
+                        <div class="exercise-card muscle" data-exercise="diamond-pushups">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="diamond-pushups" onchange="toggleMuscleExercise('diamond-pushups')">
+                                <label for="diamond-pushups"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Diamond Pushups</h4>
+                                    <p>Close-grip pushups targeting triceps</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 3 sets x 12-15 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exercise-card muscle" data-exercise="pike-pushups">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="pike-pushups" onchange="toggleMuscleExercise('pike-pushups')">
+                                <label for="pike-pushups"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Pike Pushups</h4>
+                                    <p>Shoulder-focused pushup variation</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 3 sets x 10-12 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exercise-card muscle" data-exercise="floor-dips">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="floor-dips" onchange="toggleMuscleExercise('floor-dips')">
+                                <label for="floor-dips"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Floor Dips</h4>
+                                    <p>Tricep dips using floor or chair</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 3 sets x 15-20 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pull Day -->
+                <div id="pullSplit" class="split-content">
+                    <div class="split-header">
+                        <h3><i class="fas fa-hand-paper"></i> Pull Day - Back, Biceps</h3>
+                        <span class="split-duration"><i class="fas fa-clock"></i> 45-60 minutes</span>
+                    </div>
+                    <div class="exercises-grid">
+                        <div class="exercise-card muscle" data-exercise="inverted-rows">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="inverted-rows" onchange="toggleMuscleExercise('inverted-rows')">
+                                <label for="inverted-rows"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-table"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Inverted Rows (Under Table)</h4>
+                                    <p>Back exercise using table edge</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 3 sets x 10-12 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exercise-card muscle" data-exercise="doorway-pulls">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="doorway-pulls" onchange="toggleMuscleExercise('doorway-pulls')">
+                                <label for="doorway-pulls"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Doorway Pulls</h4>
+                                    <p>Lat activation using doorway</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 3 sets x 12-15 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Legs Day -->
+                <div id="legsSplit" class="split-content">
+                    <div class="split-header">
+                        <h3><i class="fas fa-walking"></i> Legs Day - Quads, Hamstrings, Calves</h3>
+                        <span class="split-duration"><i class="fas fa-clock"></i> 45-60 minutes</span>
+                    </div>
+                    <div class="exercises-grid">
+                        <div class="exercise-card muscle" data-exercise="bulgarian-squats">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="bulgarian-squats" onchange="toggleMuscleExercise('bulgarian-squats')">
+                                <label for="bulgarian-squats"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-chair"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Bulgarian Split Squats</h4>
+                                    <p>Single-leg squat with rear foot elevated</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 3 sets x 10 reps each leg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exercise-card muscle" data-exercise="calf-raises">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="calf-raises" onchange="toggleMuscleExercise('calf-raises')">
+                                <label for="calf-raises"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Calf Raises</h4>
+                                    <p>Standing calf raises on edge</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 4 sets x 20 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upper Day -->
+                <div id="upperSplit" class="split-content">
+                    <div class="split-header">
+                        <h3><i class="fas fa-user"></i> Upper Body - Full Upper Focus</h3>
+                        <span class="split-duration"><i class="fas fa-clock"></i> 50-60 minutes</span>
+                    </div>
+                    <div class="exercises-grid">
+                        <div class="exercise-card muscle" data-exercise="upper-pushups">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="upper-pushups" onchange="toggleMuscleExercise('upper-pushups')">
+                                <label for="upper-pushups"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-hand-rock"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Standard Pushups</h4>
+                                    <p>Full chest and tricep activation</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 4 sets x 15-20 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exercise-card muscle" data-exercise="upper-rows">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="upper-rows" onchange="toggleMuscleExercise('upper-rows')">
+                                <label for="upper-rows"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-table"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Inverted Rows</h4>
+                                    <p>Back thickness and width</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 4 sets x 12 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lower Day -->
+                <div id="lowerSplit" class="split-content">
+                    <div class="split-header">
+                        <h3><i class="fas fa-shoe-prints"></i> Lower Body - Full Lower Focus</h3>
+                        <span class="split-duration"><i class="fas fa-clock"></i> 45-55 minutes</span>
+                    </div>
+                    <div class="exercises-grid">
+                        <div class="exercise-card muscle" data-exercise="lower-squats">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="lower-squats" onchange="toggleMuscleExercise('lower-squats')">
+                                <label for="lower-squats"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-walking"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Bodyweight Squats</h4>
+                                    <p>Full range of motion squats</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 4 sets x 20 reps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exercise-card muscle" data-exercise="lower-lunges">
+                            <div class="exercise-checkbox">
+                                <input type="checkbox" id="lower-lunges" onchange="toggleMuscleExercise('lower-lunges')">
+                                <label for="lower-lunges"></label>
+                            </div>
+                            <div class="exercise-content">
+                                <div class="exercise-image">
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h4>Walking Lunges</h4>
+                                    <p>Dynamic leg exercise</p>
+                                    <div class="exercise-meta">
+                                        <span><i class="fas fa-redo"></i> 3 sets x 20 steps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="workout-progress">
+                    <h4>Today's Workout Progress</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="muscleProgress" style="width: 0%"></div>
+                    </div>
+                    <span id="muscleProgressText">0 exercises completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4: Hard-Gainer Diet Algorithm -->
+    <section id="diet" class="section diet-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">MODULE 04</span>
+                <h2 class="section-title">Hard-Gainer <span class="accent">Diet Algorithm</span></h2>
+                <p class="section-desc">2,800+ calorie Indian-style diet plan for maximum gains</p>
+            </div>
+            
+            <!-- Calorie Counter -->
+            <div class="calorie-overview">
+                <div class="calorie-card">
+                    <div class="calorie-icon">
+                        <i class="fas fa-fire-alt"></i>
+                    </div>
+                    <div class="calorie-info">
+                        <span class="calorie-label">Daily Target</span>
+                        <span class="calorie-value">2,800+</span>
+                        <span class="calorie-unit">calories</span>
+                    </div>
+                </div>
+                <div class="calorie-card">
+                    <div class="calorie-icon protein">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="calorie-info">
+                        <span class="calorie-label">Protein</span>
+                        <span class="calorie-value">140g</span>
+                        <span class="calorie-unit">daily</span>
+                    </div>
+                </div>
+                <div class="calorie-card">
+                    <div class="calorie-icon carbs">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <div class="calorie-info">
+                        <span class="calorie-label">Carbs</span>
+                        <span class="calorie-value">350g</span>
+                        <span class="calorie-unit">daily</span>
+                    </div>
+                </div>
+                <div class="calorie-card">
+                    <div class="calorie-icon fats">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <div class="calorie-info">
+                        <span class="calorie-label">Healthy Fats</span>
+                        <span class="calorie-value">90g</span>
+                        <span class="calorie-unit">daily</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Diet Table -->
+            <div class="diet-table-container">
+                <h3><i class="fas fa-utensils"></i> Daily Meal Plan</h3>
+                <table class="diet-table">
+                    <thead>
+                        <tr>
+                            <th>Meal</th>
+                            <th>Food Items</th>
+                            <th>Calories</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="meal-time">
+                                <i class="fas fa-sun"></i>
+                                <span>Breakfast<br><small>7:00 AM</small></span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>3-4 Whole Eggs (scrambled/boiled)</li>
+                                    <li>Oats with Peanut Butter (2 tbsp)</li>
+                                    <li>1 Banana</li>
+                                    <li>1 glass Milk</li>
+                                </ul>
+                            </td>
+                            <td class="calories">~700</td>
+                            <td class="protein">~35g</td>
+                        </tr>
+                        <tr>
+                            <td class="meal-time">
+                                <i class="fas fa-coffee"></i>
+                                <span>Mid-Morning<br><small>10:00 AM</small></span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Banana Shake (2 bananas + milk)</li>
+                                    <li>Handful of Nuts (almonds/walnuts)</li>
+                                </ul>
+                            </td>
+                            <td class="calories">~400</td>
+                            <td class="protein">~12g</td>
+                        </tr>
+                        <tr>
+                            <td class="meal-time">
+                                <i class="fas fa-sun"></i>
+                                <span>Lunch<br><small>1:00 PM</small></span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>3 Rotis / 1.5 cups Rice</li>
+                                    <li>Dal (Lentils) - 1 bowl</li>
+                                    <li>Paneer/Soya Chunks Curry - 150g</li>
+                                    <li>Vegetable Curry</li>
+                                    <li>Salad</li>
+                                </ul>
+                            </td>
+                            <td class="calories">~800</td>
+                            <td class="protein">~40g</td>
+                        </tr>
+                        <tr>
+                            <td class="meal-time">
+                                <i class="fas fa-bolt"></i>
+                                <span>Pre-Workout<br><small>4:00 PM</small></span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>2 Bananas</li>
+                                    <li>1 tbsp Peanut Butter</li>
+                                    <li>Black Coffee (optional)</li>
+                                </ul>
+                            </td>
+                            <td class="calories">~300</td>
+                            <td class="protein">~5g</td>
+                        </tr>
+                        <tr>
+                            <td class="meal-time">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>Post-Workout<br><small>6:30 PM</small></span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Protein Shake (or 3 eggs)</li>
+                                    <li>1 Banana</li>
+                                </ul>
+                            </td>
+                            <td class="calories">~250</td>
+                            <td class="protein">~25g</td>
+                        </tr>
+                        <tr>
+                            <td class="meal-time">
+                                <i class="fas fa-moon"></i>
+                                <span>Dinner<br><small>8:30 PM</small></span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>2-3 Rotis / 1 cup Rice</li>
+                                    <li>Dal (Lentils) - 1 bowl</li>
+                                    <li>Chicken/Paneer - 150g</li>
+                                    <li>Vegetable Curry</li>
+                                    <li>Salad</li>
+                                </ul>
+                            </td>
+                            <td class="calories">~700</td>
+                            <td class="protein">~35g</td>
+                        </tr>
+                        <tr>
+                            <td class="meal-time">
+                                <i class="fas fa-bed"></i>
+                                <span>Before Bed<br><small>10:30 PM</small></span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>1 glass Warm Milk</li>
+                                    <li>Soaked Almonds (5-6)</li>
+                                </ul>
+                            </td>
+                            <td class="calories">~150</td>
+                            <td class="protein">~8g</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Total Daily Intake</strong></td>
+                            <td class="calories"><strong>~3,300</strong></td>
+                            <td class="protein"><strong>~160g</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
+            <!-- Water Intake Counter -->
+            <div class="water-tracker">
+                <div class="water-header">
+                    <i class="fas fa-tint"></i>
+                    <h3>Water Intake Tracker</h3>
+                    <span class="water-goal">Goal: 4 Liters</span>
+                </div>
+                <div class="water-display">
+                    <div class="water-visual">
+                        <div class="water-bottle">
+                            <div class="water-level" id="waterLevel" style="height: 0%"></div>
+                            <div class="water-bubbles">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="water-stats">
+                        <div class="water-amount">
+                            <span id="waterAmount">0</span>
+                            <small>/ 4000 ml</small>
+                        </div>
+                        <div class="water-percentage" id="waterPercentage">0%</div>
+                    </div>
+                </div>
+                <div class="water-controls">
+                    <button class="water-btn" onclick="addWater(250)">
+                        <i class="fas fa-glass-whiskey"></i>
+                        <span>+250ml</span>
+                    </button>
+                    <button class="water-btn" onclick="addWater(500)">
+                        <i class="fas fa-glass-water"></i>
+                        <span>+500ml</span>
+                    </button>
+                    <button class="water-btn reset" onclick="resetWater()">
+                        <i class="fas fa-redo"></i>
+                        <span>Reset</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Key Foods -->
+            <div class="key-foods">
+                <h3><i class="fas fa-star"></i> Key Hard-Gainer Foods</h3>
+                <div class="foods-grid">
+                    <div class="food-item">
+                        <i class="fas fa-egg"></i>
+                        <span>3-4 Eggs Daily</span>
+                    </div>
+                    <div class="food-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>Oats + Peanut Butter</span>
+                    </div>
+                    <div class="food-item">
+                        <i class="fas fa-cheese"></i>
+                        <span>Paneer / Soya Chunks</span>
+                    </div>
+                    <div class="food-item">
+                        <i class="fas fa-banana"></i>
+                        <span>Banana Shakes</span>
+                    </div>
+                    <div class="food-item">
+                        <i class="fas fa-bowl-rice"></i>
+                        <span>Rice + Dal Dinner</span>
+                    </div>
+                    <div class="food-item">
+                        <i class="fas fa-glass-whiskey"></i>
+                        <span>Milk (3-4 glasses)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 5: Aesthetic Gallery & Motivation -->
+    <section id="aesthetics" class="section aesthetics-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">MODULE 05</span>
+                <h2 class="section-title">Aesthetic <span class="accent">Goals</span></h2>
+                <p class="section-desc">Visualize your transformation target - The V-Taper Physique</p>
+            </div>
+            
+            <!-- V-Taper Goal -->
+            <div class="v-taper-section">
+                <div class="v-taper-content">
+                    <div class="v-taper-header">
+                        <div class="v-taper-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3>The V-Taper Goal</h3>
+                    </div>
+                    <p class="v-taper-desc">
+                        Despite starting at 48kg, your goal is to build a <strong>V-Taper physique</strong> - 
+                        a powerful aesthetic that creates the illusion of width and strength through strategic muscle development.
+                    </p>
+                    
+                    <div class="muscle-focus">
+                        <h4><i class="fas fa-bullseye"></i> Primary Focus Areas</h4>
+                        <div class="focus-cards">
+                            <div class="focus-card">
+                                <div class="focus-image">
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                </div>
+                                <div class="focus-info">
+                                    <h5>Lateral Delts (Shoulders)</h5>
+                                    <p>Wide shoulders create the top of the V-shape. Focus on pike pushups and lateral raises.</p>
+                                    <div class="focus-exercises">
+                                        <span class="exercise-tag">Pike Pushups</span>
+                                        <span class="exercise-tag">Wall Walks</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="focus-card">
+                                <div class="focus-image">
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="focus-info">
+                                    <h5>Latissimus Dorsi (Lats)</h5>
+                                    <p>Wide lats create the downward sweep of the V. Doorway pulls and inverted rows are key.</p>
+                                    <div class="focus-exercises">
+                                        <span class="exercise-tag">Doorway Pulls</span>
+                                        <span class="exercise-tag">Inverted Rows</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="v-taper-tips">
+                        <h4><i class="fas fa-lightbulb"></i> V-Taper Building Tips</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Train shoulders 2x per week for width</li>
+                            <li><i class="fas fa-check"></i> Focus on back width exercises (pulls/rows)</li>
+                            <li><i class="fas fa-check"></i> Maintain a narrow waist through core control</li>
+                            <li><i class="fas fa-check"></i> Stay lean while building muscle for definition</li>
+                            <li><i class="fas fa-check"></i> Posture improvement enhances the V-effect</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="v-taper-visual">
+                    <div class="physique-diagram">
+                        <div class="physique-shape">
+                            <div class="shoulders"></div>
+                            <div class="lats"></div>
+                            <div class="waist"></div>
+                        </div>
+                        <div class="shape-labels">
+                            <span class="label-shoulders">Wide Shoulders</span>
+                            <span class="label-lats">Wide Lats</span>
+                            <span class="label-waist">Narrow Waist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Motivation Section -->
+            <div class="motivation-section">
+                <h3><i class="fas fa-fire-alt"></i> Daily Motivation</h3>
+                <div class="motivation-grid">
+                    <div class="motivation-card">
+                        <div class="motivation-number">01</div>
+                        <p>"The only bad workout is the one that didn't happen."</p>
+                    </div>
+                    <div class="motivation-card">
+                        <div class="motivation-number">02</div>
+                        <p>"Your body can stand almost anything. It's your mind that you have to convince."</p>
+                    </div>
+                    <div class="motivation-card">
+                        <div class="motivation-number">03</div>
+                        <p>"180 days from now, you'll wish you started today."</p>
+                    </div>
+                    <div class="motivation-card">
+                        <div class="motivation-number">04</div>
+                        <p>"Every rep counts. Every meal matters. Stay consistent."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Transformation Timeline -->
+            <div class="timeline-section">
+                <h3><i class="fas fa-calendar-alt"></i> 180-Day Transformation Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">30</div>
+                        <div class="timeline-content">
+                            <h4>Day 30</h4>
+                            <p>Foundation built. Habits formed. First 2-3kg gained.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">60</div>
+                        <div class="timeline-content">
+                            <h4>Day 60</h4>
+                            <p>Visible changes. Strength increased. 5-6kg gained.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">90</div>
+                        <div class="timeline-content">
+                            <h4>Day 90</h4>
+                            <p>Halfway point. Significant muscle growth. 8-9kg gained.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">120</div>
+                        <div class="timeline-content">
+                            <h4>Day 120</h4>
+                            <p>Aesthetic improvements visible. 10-11kg gained.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">150</div>
+                        <div class="timeline-content">
+                            <h4>Day 150</h4>
+                            <p>V-taper forming. Near goal weight. 11-12kg gained.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item target">
+                        <div class="timeline-marker">180</div>
+                        <div class="timeline-content">
+                            <h4>Day 180 - GOAL!</h4>
+                            <p>60kg achieved! V-taper physique complete!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6: Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>AESTHETIC<span class="accent">EVOLUTION</span></span>
+                    </div>
+                    <p>Transform your body. Maximize your potential. 180 days to a new you.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Modules</h4>
+                        <ul>
+                            <li><a href="#dashboard">Dashboard</a></li>
+                            <li><a href="#tracker">Weight Tracker</a></li>
+                            <li><a href="#workout">Workout Engine</a></li>
+                            <li><a href="#diet">Diet Plan</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#aesthetics">Aesthetic Goals</a></li>
+                            <li><a href="#" onclick="resetAllData()">Reset All Data</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-cta">
+                <button class="start-day-one-btn" onclick="startDayOne()">
+                    <i class="fas fa-rocket"></i>
+                    START DAY 1
+                </button>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aesthetic Evolution. Built for transformation.</p>
+                <p class="footer-note">100% Home-Based | No Equipment Needed | 180-Day Journey</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
